@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <script type="text/javascript">
+    	function rem(size){
+    		var clientW=document.documentElement.clientWidth;
+    		var bili=clientW/size*100;
+    		document.getElementsByTagName("html")[0].style.fontSize=bili+"px";
+    	}
+    	window.onload=function(){
+    		rem(360)
+    	}
+    </script>
+    <style>
+    	html,body{
+    		width: 100%;
+    		height: 100%;
+    		overflow: hidden;
+    	}
+    	.swiper-container{
+    		width: 100%;
+    		height: 100%;
+    	}
+    	.one{
+    		background: deepskyblue;
+    		overflow: hidden;
+    	}
+    	.two{
+    		background: deeppink;
+    		overflow: hidden;
+    	}
+    	.three{
+    		background: greenyellow;
+    		overflow: hidden;
+    	}
+    	.four{
+    		background: darkred;
+    		overflow: hidden;
+    	}
+    	.uek{
+    		width: 1.8rem;
+    		height: 1.8rem;
+    		border: 4px solid #fff;
+    		border-radius: 50%;
+    		line-height: 1.8rem;
+    		text-align: center;
+    		color: #fff;
+    		font-size: 0.4rem;
+    		margin-top: 0.6rem;
+    		margin-left: auto;
+    		margin-right: auto;
+    		transform:rotate(360deg)
+    		-webkit-animation: rotate 1s ease;
+    	}
+    	.left{
+    		color: #fff;
+    		font-size: 0.3rem;
+    		/*height: 0.5rem;*/
+    		margin-left: 0.3rem;
+    		margin-top: 1rem;
+    		transform:translate(-1000px,0)
+    		-webkit-animation: left 1s ease forwards 0.4s;
+    	}
+    	.right{
+    		color: #fff;
+    		font-size: 0.3rem;
+    		/*height: 0.5rem;*/
+    		text-align: right;
+    		margin-right: 0.3rem;
+    		margin-top: 0.8rem;
+    		transform:translate(1000px,0)
+    		-webkit-animation: right 1s ease forwards 0.8s;
+    	}
+    	
+    	@-webkit-keyframes rotate{
+    		0%{
+    			transform:rotate(360deg)
+    		},
+    		100%{
+    			transform:rotate(0deg)
+    		}
+    	}
+    	
+    	@-webkit-keyframes left{
+    		0%{
+    			transform:translate(-1000px,0)
+    		},
+    		100%{
+    			transform:translate(0,0)
+    		}
+    	}
+    	@-webkit-keyframes right{
+    		0%{
+    			transform:translate(1000px,0)
+    		},
+    		100%{
+    			transform:translate(0,0)
+    		}
+    	}
+    </style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide one">
+        	<div class="uek">
+        		music
+        	</div>
+        	<div class="left">
+        		音乐天堂
+        	</div>
+        	<div class="right">
+        		音乐魅力
+        	</div>
+        </div>
+        <div class="swiper-slide two">
+        	<div class="uek">
+        		music
+        	</div>
+        	<div class="left">
+        		音乐天堂
+        	</div>
+        	<div class="right">
+        		音乐魅力
+        	</div>
+        </div>
+        <div class="swiper-slide three">
+        	<div class="uek">
+        		music
+        	</div>
+        	<div class="left">
+        		音乐天堂
+        	</div>
+        	<div class="right">
+        		音乐魅力
+        	</div>
+        </div>
+        <div class="swiper-slide four">
+        	<div class="uek">
+        		music
+        	</div>
+        	<div class="left">
+        		音乐天堂
+        	</div>
+        	<div class="right">
+        		音乐魅力
+        	</div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+<script> 
+var swipers=document.getElementsByClassName("swiper-slide")
+/*alert(swipers.length)*/
+var mySwiper = new Swiper('.swiper-container',{
+	pagination : '.swiper-pagination',
+	
+	onSlideChangeEnd: function(swiper){	
+		/*alert(mySwiper.activeIndex)*/
+	swipers[mySwiper.activeIndex].getElementsByClassName("uek")[0].style.webkitAnimation="rotate 1s ease";
+	swipers[mySwiper.activeIndex].getElementsByClassName("left")[0].style.webkitAnimation="left 1s ease forwards 0.4s";   
+	swipers[mySwiper.activeIndex].getElementsByClassName("right")[0].style.webkitAnimation="right 1s ease forwards 0.8s";
+	}
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/zepto.min.js",
+			"tpl/header.html",
+			"css/index.css",
+			"tpl/middle.html",
+			"css/iconfont.css",
+			"fonts/iconfont.ttf",
+			"js/index.js",
+			"js/swiper.min.js",
+			"js/touch.min.js",
+			"fonts/iconfont.woff"
+		],
+		"refer": [
+			"tpl/footer.html",
+			"tpl/header.html",
+			"tpl/middle.html",
+			"tpl/menu.html",
+			"tpl/_category.html",
+			"tpl/_search.html"
+		]
+	},
+	"welcome.html": {
+		"resources": [
+			"images/logo.png",
+			"js/zepto.min.js",
+			"images/copy.png",
+			"images/bg1.jpg",
+			"css/swiper.min.css",
+			"js/swiper.min.js",
+			"js/welcome.js",
+			"css/welcome.css",
+			"images/bg11.png"
+		],
+		"refer": [
+			"index.html"
+		]
+	},
+	"tpl/middle.html": {
+		"resources": [
+			"css/index.css",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/swiper.min.css",
+			"js/zepto.min.js",
+			"css/iconfont.css",
+			"js/swiper.min.js",
+			"fonts/iconfont.ttf",
+			"js/touch.min.js",
+			"js/index.js",
+			"images/logo1.png"
+		]
+	},
+	"tpl/menu.html": {
+		"resources": [
+			"css/index.css",
+			"js/mui.min.js",
+			"js/zepto.min.js",
+			"css/iconfont.css",
+			"css/swiper.min.css",
+			"css/mui.min.css",
+			"js/swiper.min.js",
+			"js/touch.min.js",
+			"js/index.js"
+		]
+	},
+	"tpl/_category.html": {
+		"resources": [
+			"css/index.css",
+			"js/mui.min.js",
+			"js/zepto.min.js",
+			"css/iconfont.css",
+			"css/swiper.min.css",
+			"css/mui.min.css",
+			"js/swiper.min.js",
+			"js/touch.min.js",
+			"js/index.js",
+			"fonts/mui.ttf",
+			"fonts/iconfont.ttf"
+		],
+		"refer": [
+			"tpl/category.html"
+		]
+	},
+	"tpl/category.html": {
+		"resources": [
+			"css/index.css",
+			"images/logo1.png",
+			"js/mui.min.js",
+			"js/zepto.min.js",
+			"css/iconfont.css",
+			"css/swiper.min.css",
+			"css/mui.min.css",
+			"js/swiper.min.js",
+			"js/touch.min.js",
+			"js/index.js"
+		]
+	},
+	"tpl/_search.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"css/index.css",
+			"js/mui.min.js",
+			"js/zepto.min.js",
+			"css/iconfont.css",
+			"css/swiper.min.css",
+			"css/mui.min.css",
+			"js/swiper.min.js",
+			"fonts/iconfont.ttf",
+			"js/touch.min.js",
+			"js/index.js"
+		],
+		"refer": [
+			"tpl/search.html"
+		]
+	},
+	"tpl/search.html": {
+		"resources": [
+			"fonts/iconfont.ttf",
+			"css/index.css",
+			"images/logo1.png",
+			"js/mui.min.js",
+			"js/zepto.min.js",
+			"css/iconfont.css",
+			"css/swiper.min.css",
+			"css/mui.min.css",
+			"js/swiper.min.js",
+			"js/touch.min.js",
+			"js/index.js"
+		]
+	}
+}

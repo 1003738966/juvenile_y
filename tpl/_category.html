@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<link rel="stylesheet" href="../css/swiper.min.css" />
+	</head>
+    <style>
+    	.mui-bar-nav{
+			background: #224A49;
+		}
+		.mui-bar-nav h1{
+			color: #fff;
+		}
+		.search input{
+			margin-top: 0.38rem;
+		}
+		.search span{
+			margin-top: 0.2rem;
+		}
+    </style>
+	<body>
+		<script src="../js/zepto.min.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/index.js"></script>
+		<script src="../js/touch.min.js"></script>
+		<script src="../js/swiper.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				document.addEventListener("plusready",function(){
+					var curr=plus.webview.currentWebview();
+					var url=curr.url;
+					var clientH=document.documentElement.clientHeight;
+					var linkcate=plus.webview.create(url,"",{top:"88px",height:clientH-132+"px"});
+					linkcate.show("slide-in-right")
+				})
+			})
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">分类</h1>
+		</header>
+    <!--搜索-->
+    <div class="search">
+        <input type="text" placeholder="搜索歌曲、歌手...">
+        <span class="iconfont icon-sousuo"></span>
+    </div>
+   <!--搜索结束-->
+		 <!--footer-->
+    <footer>
+        <div class="tubiao">
+            <img src="" alt="">
+        </div>
+        <div class="song">
+            <h1>身骑白马（Live）</h1>
+            <span>左右滑动可切换歌曲</span>
+        </div>
+        <div class="button">
+            <span class="iconfont icon-iconfonthoutui"></span>
+            <span class="iconfont icon-bofang1"></span>
+            <span class="iconfont icon-iconfontqianjin"></span>
+        </div>
+    </footer>
+		
+	</body>
+
+</html>

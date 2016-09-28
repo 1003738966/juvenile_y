@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/touch.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/index.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/iconfont.css" />
+    <script type="text/javascript" charset="utf-8">
+      	if(!localStorage.first){
+      		localStorage.first=true;
+      		location.href="welcome.html";
+      	}
+      	/*首页当中添加新窗口*/
+      	document.addEventListener("plusready",function(){
+      		var curr=plus.webview.currentWebview();
+      		var clientH=document.documentElement.clientHeight;
+      		var middle=plus.webview.create("_www/tpl/middle.html","",{height:clientH-132+"px",top:"88px"});
+      		curr.append(middle);
+      	/*点击导航，从右侧划出菜单*/	
+      		var menu;
+      		mui("nav").on("tap",".set",function(){
+      			curr.setStyle({mask:"rgba(0,0,0,0.6)"});
+      			menu=plus.webview.create("_www/tpl/menu.html","",{top:"88px",height:clientH-132+"px",width:"70%",right:"0px"});
+      			menu.show("slide-in-right");
+      		})
+      	/*点击遮罩使菜单划出当前页面*/	
+      		curr.addEventListener("maskClick",function(){	
+      			menu.close("slide-out-right");
+      			curr.setStyle({mask:"none"})
+      		});
+      		
+      	/*点击导航出现分类页面*/
+      		mui("nav").on("tap",".cate",function(){
+      			var url=this.getAttribute("url");
+      			localcate=plus.webview.create("_www/tpl/_category.html","",{},{url:url});
+      			localcate.show("slide-in-right")
+      		})
+      	/*点击搜索出现搜索页面*/
+      		mui("nav").on("tap",".searchs",function(){
+      			var url=this.getAttribute("url");
+      			localsearch=plus.webview.create("_www/tpl/_search.html","",{},{url:url});
+      			localsearch.show("slide-in-right")
+      		})
+      	/*播放音频*/
+      	var audio=$("audio");
+      	var play=$(".play");
+      	var paused=$(".paused");
+      	var up=$(".up");
+      	var next=$(".next");
+      	//alert(audio)
+			/*mui(".button").on("tap",".play",function(){
+				audio.play()
+			})
+*/
+			touch.on()
+      	})
+    </script>
+</head>
+<body>
+	<audio src="music/BIGBANG.mp3"></audio>
+	<!--导航-->
+	<nav>
+	    <div class="menu">
+	        <a href="javascript:;">推荐</a>
+	        <a href="javascript:;" url="_www/tpl/category.html" class="cate">分类</a>
+	        <a href="javascript:;" url="_www/tpl/search.html" class="searchs">搜索</a>
+	        <a href="javascript:;" class="set">我的</a>
+	        <a href="javascript:;">歌曲</a>
+	    </div>
+	</nav>	
+	<div class="con">
+    <!--搜索-->
+    <div class="search">
+        <input type="text" placeholder="搜索歌曲、歌手...">
+        <span class="iconfont icon-sousuo"></span>
+    </div>
+   <!--搜索结束-->
+   
+    <!--footer-->
+    <footer>
+        <div class="tubiao">
+            <img src="" alt="">
+        </div>
+        <div class="song">
+            <h1>LOSER（Live）</h1>
+            <span>左右滑动可切换歌曲</span>
+        </div>
+        <div class="button">
+            <span class="iconfont icon-iconfonthoutui up"></span>
+            <!--<span class="iconfont icon-bofang1 paused"></span>-->
+            <span class="iconfont icon-iconfontqianjin play"></span>
+            <span class="iconfont icon-iconfontqianjin next"></span>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
